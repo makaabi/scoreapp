@@ -1,12 +1,11 @@
 
 <h2 id="title"> </h2>
-
 <div class="container">
 
 <div  class="boxitem" id="form1cont">
-  <h2>1ere </h2>
 
-  <form [formGroup]="this.form"  >
+  <h2>1ere</h2>
+    <form [formGroup]="this.form"  >
     <div>
 
       <mat-radio-group name="age" formControlName="annne_naissance">
@@ -126,20 +125,24 @@
           <input type="number" formControlName="scoree" min="0" max="100"  matInput placeholder="sur 100">
           <mat-hint><a href="https://drive.google.com/drive/folders/1keDKqcByg79lH1WVoKWM6j_bCzE0O7nQ?usp=sharing"
             appExternalUrl target="_blank"
-        >formules score E</a></mat-hint>
+        >formules score E </a></mat-hint>
+     
+
         </mat-form-field>
        
       </div>
       <button id="btnreset"  type="button" (click)="resetthings()"mat-raised-button color="basic">Réinitialiser</button>
 
       <button id="btncalcul" mat-raised-button color="accent">Calculer</button>
+     
 
      
 
-    
+      
     
   
     </form>
+   
   </div>
 
 
@@ -147,3 +150,4 @@
   
   </div>
   
+ 
