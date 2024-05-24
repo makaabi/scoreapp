@@ -11,10 +11,11 @@
 
       <mat-radio-group name="age" formControlName="annne_naissance">
         <mat-label>Année de naissance : </mat-label>
-        <mat-radio-button value="2002" >2002</mat-radio-button>&nbsp;
+        <mat-radio-button value="2003" >2003</mat-radio-button>&nbsp;
+        <mat-radio-button value="2002">2002</mat-radio-button>&nbsp;
         <mat-radio-button value="2001">2001</mat-radio-button>&nbsp;
-        <mat-radio-button value="2000">2000</mat-radio-button>&nbsp;
-        <mat-radio-button value="1999">1999</mat-radio-button>&nbsp;
+        <mat-radio-button value="2000">>2000</mat-radio-button>&nbsp;
+
       </mat-radio-group>
     </div>
     <div>
@@ -122,9 +123,12 @@
       <div>
         <mat-form-field appearance="outline">
           <mat-label>Score E</mat-label>
-          <input type="number" formControlName="scoree" min="0" max="100"  matInput placeholder="Placeholder">
-          <mat-hint>sur 100</mat-hint>
+          <input type="number" formControlName="scoree" min="0" max="100"  matInput placeholder="sur 100">
+          <mat-hint><a href="https://drive.google.com/drive/folders/1keDKqcByg79lH1WVoKWM6j_bCzE0O7nQ?usp=sharing"
+            appExternalUrl target="_blank"
+        >formules score E</a></mat-hint>
         </mat-form-field>
+       
       </div>
       <button id="btnreset"  type="button" (click)="resetthings()"mat-raised-button color="basic">Réinitialiser</button>
 
@@ -136,8 +140,8 @@
     
   
     </form>
-
   </div>
+
 
 
   

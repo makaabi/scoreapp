@@ -11,10 +11,10 @@
 
       <mat-radio-group name="age" formControlName="annne_naissance">
         <mat-label>Année de naissance : </mat-label>
-        <mat-radio-button value="2000" >2000</mat-radio-button>&nbsp;
+        <mat-radio-button value="2001" >2001</mat-radio-button>&nbsp;
+        <mat-radio-button value="2000">2000</mat-radio-button>&nbsp;
         <mat-radio-button value="1999">1999</mat-radio-button>&nbsp;
-        <mat-radio-button value="1998">1998</mat-radio-button>&nbsp;
-        <mat-radio-button value="1997">>1997</mat-radio-button>&nbsp;
+        <mat-radio-button value="1998">>1998</mat-radio-button>&nbsp;
       </mat-radio-group>
     </div>
     <div>
@@ -28,7 +28,7 @@
     <div>
       <mat-form-field appearance="outline">
         <mat-label>Moyenne en 1ére année</mat-label>
-        <input type="number" formControlName="moy1ere"  min="0" max="20" matInput placeholder="Placeholder">
+        <input type="number" formControlName="moy1ere"  min="0" max="20" matInput placeholder="1ere Licence">
         <mat-hint>sur 20</mat-hint>
       </mat-form-field>
 
@@ -39,7 +39,16 @@
     <div>
       <mat-form-field appearance="outline">
         <mat-label>Moyenne en 2eme année</mat-label>
-        <input type="number" formControlName="moy2eme"  min="0" max="20"  matInput placeholder="Placeholder">
+        <input type="number" formControlName="moy2eme"  min="0" max="20"  matInput placeholder="2eme Licence">
+        <mat-hint>sur 20</mat-hint>
+      </mat-form-field>
+
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Moyenne en 3eme année</mat-label>
+        <input type="number" formControlName="moy3eme"  min="0" max="20"  matInput placeholder="sans note PFE">
         <mat-hint>sur 20</mat-hint>
       </mat-form-field>
 
@@ -48,7 +57,7 @@
     <div>
       <mat-form-field appearance="outline">
         <mat-label>Moyenne générale en M1</mat-label>
-        <input type="number" formControlName="moym1"  min="0" max="20"  matInput placeholder="Placeholder">
+        <input type="number" formControlName="moym1"  min="0" max="20"  matInput placeholder="Moyenne 1ere M1">
         <mat-hint>sur 20</mat-hint>
       </mat-form-field>
 

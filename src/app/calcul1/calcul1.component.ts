@@ -95,7 +95,7 @@ constructor(private fb: FormBuilder
   this.B2=0;
   this.ML=0;
 
-  if(this.form.value.annne_naissance=="2002" || this.form.value.annne_naissance=="2001")
+  if(this.form.value.annne_naissance=="2002" || this.form.value.annne_naissance=="2003")
   {
     this.B1=5;
   }

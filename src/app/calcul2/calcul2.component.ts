@@ -33,6 +33,7 @@ constructor(private fb: FormBuilder
       moybac: [, [Validators.required]],
       moy1ere: [, [Validators.required]],
       moy2eme: [, [Validators.required]],
+      moy3eme: [, [Validators.required]],
       moym1: [, [Validators.required]],
       redoublant: [, [Validators.required]],
      
@@ -73,7 +74,7 @@ constructor(private fb: FormBuilder
   this.B1=0;
   this.B2=0;
 
-  if(this.form.value.annne_naissance=="2000" || this.form.value.annne_naissance=="1999")
+  if(this.form.value.annne_naissance=="2000" || this.form.value.annne_naissance=="2001")
   {
     this.B1=5;
   }
@@ -96,7 +97,7 @@ constructor(private fb: FormBuilder
   this.B2=10;
   else if (this.form.value.moybac >=11 )
   this.B2=5;
-  this.Mg=(this.form.value.moy1ere+this.form.value.moy2eme+this.form.value.moym1)/3;
+  this.Mg=(this.form.value.moy1ere+this.form.value.moy2eme+this.form.value.moy3eme+this.form.value.moym1)/4;
 
   if(this.Mg >=15 )
   this.M=100;

@@ -6,6 +6,7 @@ const routes: Routes = [
 
   {path:'1ere',component:Calcul1Component},
   {path:'2eme',component:Calcul2Component},
+  
 ];
 
 @NgModule({
