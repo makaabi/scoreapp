@@ -11,7 +11,6 @@ export class Calcul2Component {
   title = 'scorecalculator';
   public form:  FormGroup; 
   public form2:  FormGroup; 
-  show:boolean=false;
 C;
 scoreg;
 M;
@@ -48,7 +47,6 @@ constructor(private fb: FormBuilder
 
   onSubmit(){
     if(this.form.invalid){
-      this.show=false;
       this.toastr.warning( 'veuillez-vous vérifier votre information'); 
     }
     else 
@@ -109,12 +107,13 @@ constructor(private fb: FormBuilder
  
 
   this.scoreg=this.C*(this.M+this.B1+this.B2);
-  this.show=true;
+
+  let str1="Score:"+this.scoreg.toFixed(2)
+  this.toastr.info(str1);
 }
 
 resetthings(){
   
-  this.show=false;
   location.reload();
 
 }

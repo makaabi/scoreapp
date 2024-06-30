@@ -1,153 +1,109 @@
-
 <h2 id="title"> </h2>
 <div class="container">
-
-<div  class="boxitem" id="form1cont">
-
-  <h2>1ere</h2>
-    <form [formGroup]="this.form"  >
-    <div>
-
-      <mat-radio-group name="age" formControlName="annne_naissance">
-        <mat-label>Année de naissance : </mat-label>
-        <mat-radio-button value="2003" >2003</mat-radio-button>&nbsp;
-        <mat-radio-button value="2002">2002</mat-radio-button>&nbsp;
-        <mat-radio-button value="2001">2001</mat-radio-button>&nbsp;
-        <mat-radio-button value="2000">>2000</mat-radio-button>&nbsp;
-
-      </mat-radio-group>
+    <div class="boxitem" id="form1cont">
+        <h2>1ere Concours spécifiques</h2>
+        <form [formGroup]="this.form">
+            <div>
+                <mat-radio-group name="age" formControlName="annne_naissance">
+                    <mat-label>Année de naissance : </mat-label>
+                    <mat-radio-button value="2003">2003</mat-radio-button>&nbsp;
+                    <mat-radio-button value="2002">2002</mat-radio-button>&nbsp;
+                    <mat-radio-button value="2001">2001</mat-radio-button>&nbsp;
+                    <mat-radio-button value="2000">>2000</mat-radio-button>&nbsp;
+                </mat-radio-group>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Moyenne bac</mat-label>
+                    <input type="number" formControlName="moybac" min="0" max="20" matInput placeholder="Moyenne bac">
+                    <mat-hint>sur 20</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Moyenne en 1ére</mat-label>
+                    <input type="number" formControlName="moy1ere" min="0" max="20" matInput placeholder="Moyenne 1ere">
+                    <mat-hint>sur 20</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>rang 1ére</mat-label>
+                    <input type="number" formControlName="rang1ere" min="1" max="200" matInput placeholder="Le rang pour la 1ére">
+                    <mat-hint>Toute la promotion</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Effectif promotion</mat-label>
+                    <input type="number" formControlName="effect1ere" min="1" max="500" matInput placeholder="nombre etudiants">
+                    <mat-hint>nombre d'élèves</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Moyenne en 2eme année</mat-label>
+                    <input type="number" formControlName="moy2eme" min="0" max="20" matInput placeholder="Moyenne 2eme">
+                    <mat-hint>sur 20</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>rang 2eme</mat-label>
+                    <input type="number" formControlName="rang2eme" min="1" max="200" matInput placeholder="Le rang pour la 2eme année">
+                    <mat-hint>Toute la promotion</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Effectif promotion</mat-label>
+                    <input type="number" formControlName="effect2eme" min="1" max="500" matInput placeholder="Effectif de la promotion">
+                    <mat-hint>nombre d'élèves</mat-hint>
+                </mat-form-field>
+            </div>
+        </form>
     </div>
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Moyenne bac</mat-label>
-        <input type="number" formControlName="moybac" min="0" max="20"  matInput placeholder="Moyenne bac">
-        <mat-hint>sur 20</mat-hint>
-      </mat-form-field>
+    <div class="boxitem" id="form2cont">
+        <form [formGroup]="this.form2" (ngSubmit)="onSubmit()">
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>moyenne français (1ere)</mat-label>
+                    <input type="number" formControlName="moyfr1" min="0" max="20" matInput placeholder="moyenne français (1ere)">
+                    <mat-hint>sur 20</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>moyenne français (2eme)</mat-label>
+                    <input type="number" formControlName="moyfr2" min="0" max="20" matInput placeholder="moyenne français (2eme)">
+                    <mat-hint>sur 20</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>moyenne anglais (1ere)</mat-label>
+                    <input type="number" formControlName="moyeng1" min="0" max="20" matInput placeholder="moyenne anglais (1ere)">
+                    <mat-hint>sur 20</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>moyenne anglais (2eme)</mat-label>
+                    <input type="number" formControlName="moyeng2" min="0" max="20" matInput placeholder="moyenne anglais (2eme)">
+                    <mat-hint>sur 20</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Score E</mat-label>
+                    <input type="number" formControlName="scoree" min="0" max="100" matInput placeholder="sur 100">
+                    <mat-hint>
+                        <a href="https://drive.google.com/drive/folders/1keDKqcByg79lH1WVoKWM6j_bCzE0O7nQ?usp=sharing" appExternalUrl target="_blank">formules score E</a>
+                    </mat-hint>
+                </mat-form-field>
+            </div>
+            <button id="btnreset" type="button" (click)="resetthings()" mat-raised-button color="basic">Réinitialiser</button>
+            <button id="btncalcul" mat-raised-button color="accent">Calculer</button>
+        </form>
     </div>
-
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Moyenne en 1ére</mat-label>
-        <input type="number" formControlName="moy1ere"  min="0" max="20" matInput placeholder="Moyenne 1ere">
-        <mat-hint>sur 20</mat-hint>
-      </mat-form-field>
-
-    </div>
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>rang 1ére </mat-label>
-        <input type="number" formControlName="rang1ere"  min="1" max="200" matInput placeholder="Le rang pour la 1ére">
-        <mat-hint>Toute la promotion
-        </mat-hint>
-      </mat-form-field>
-
-    </div>
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Effectif promotion</mat-label>
-        <input type="number"  formControlName="effect1ere"  min="1" max="500"  matInput placeholder="nombre etudiants">
-        <mat-hint>nombre d'élèves 
-        </mat-hint>
-      </mat-form-field>
-
-    </div>
-  
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Moyenne en 2eme année</mat-label>
-        <input type="number" formControlName="moy2eme"  min="0" max="20"  matInput placeholder="Moyenne 2eme">
-        <mat-hint>sur 20</mat-hint>
-      </mat-form-field>
-
-    </div>
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>rang 2eme </mat-label>
-        <input type="number" formControlName="rang2eme"  min="1" max="200"  matInput placeholder="Le rang pour la 2eme année">
-        <mat-hint>Toute la promotion
-        </mat-hint>
-      </mat-form-field>
-
-    </div>
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Effectif promotion</mat-label>
-        <input type="number" formControlName="effect2eme" min="1" max="500"  matInput placeholder="Effectif de la promotion">
-        <mat-hint>nombre d'élèves 
-        </mat-hint>
-      </mat-form-field>
-
-    </div>
-
-  </form>
-
 </div>
-  <div class="boxitem" id="form2cont">
-
-    <form [formGroup]="this.form2" (ngSubmit)="onSubmit()"  >
-    
-  
-      <div>
-        <mat-form-field appearance="outline">
-          <mat-label>moyenne français (1ere)</mat-label>
-          <input type="number" formControlName="moyfr1" min="0" max="20" matInput placeholder="moyenne français (1ere)">
-          <mat-hint>sur 20</mat-hint>
-        </mat-form-field>
-      </div>
-
-      <div>
-        <mat-form-field appearance="outline">
-          <mat-label>moyenne français (2eme)</mat-label>
-          <input type="number" formControlName="moyfr2" min="0" max="20" matInput placeholder="moyenne français (2eme)">
-          <mat-hint>sur 20</mat-hint>
-        </mat-form-field>
-      </div>
-
-      <div>
-        <mat-form-field appearance="outline">
-          <mat-label>moyenne anglais (1ere)</mat-label>
-          <input type="number" formControlName="moyeng1" min="0" max="20" matInput placeholder="moyenne anglais (1ere)">
-          <mat-hint>sur 20</mat-hint>
-        </mat-form-field>
-      </div>
-
-      <div>
-        <mat-form-field appearance="outline">
-          <mat-label>moyenne anglais (2eme)</mat-label>
-          <input type="number" formControlName="moyeng2" min="0" max="20" matInput placeholder="moyenne anglais (2eme)">
-          <mat-hint>sur 20</mat-hint>
-        </mat-form-field>
-      </div>
-
-      <div>
-        <mat-form-field appearance="outline">
-          <mat-label>Score E</mat-label>
-          <input type="number" formControlName="scoree" min="0" max="100"  matInput placeholder="sur 100">
-          <mat-hint><a href="https://drive.google.com/drive/folders/1keDKqcByg79lH1WVoKWM6j_bCzE0O7nQ?usp=sharing"
-            appExternalUrl target="_blank"
-        >formules score E </a></mat-hint>
-     
-
-        </mat-form-field>
-       
-      </div>
-      <button id="btnreset"  type="button" (click)="resetthings()"mat-raised-button color="basic">Réinitialiser</button>
-
-      <button id="btncalcul" mat-raised-button color="accent">Calculer</button>
-     
-
-     
-
-      
-    
-  
-    </form>
-   
-  </div>
-
-
-
-  
-  </div>
-  
- 

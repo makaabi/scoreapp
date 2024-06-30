@@ -1,0 +1,96 @@
+<h2 id="title"> </h2>
+
+<div class="container">
+  <div class="boxitem" id="form1cont">
+    <h2>Score Insat </h2>
+
+    <form [formGroup]="this.form" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Moyenne bac</mat-label>
+                <input type="number" formControlName="moybac" min="0" max="20" matInput placeholder="Placeholder">
+                <mat-hint>sur 20</mat-hint>
+              </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-radio-group name="age" formControlName="annne_naissance">
+              <mat-label>Année de naissance : </mat-label>
+              <mat-radio-button value="2003">2003</mat-radio-button>&nbsp;
+              <mat-radio-button value="2002">2002</mat-radio-button>&nbsp;
+              <mat-radio-button value="2001">2001</mat-radio-button>&nbsp;
+              <mat-radio-button value="2000">2000</mat-radio-button>&nbsp;
+            </mat-radio-group>
+          </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+            <mat-label>Moyenne 1ére</mat-label>
+            <input type="number" formControlName="moy1ere" min="0" max="20" matInput placeholder="1ere Licence">
+            <mat-hint>sur 20</mat-hint>
+          </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Rang 1ére</mat-label>
+          <input type="number" formControlName="rang1ere" min="1" max="20" matInput placeholder="rang 1ere Licence">
+          <mat-hint>sur promotion</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Effectif promotion</mat-label>
+          <input type="number" formControlName="eff1ere" min="1" max="999" matInput placeholder="Effectif 1ere">
+          <mat-hint>nombre d'élèves</mat-hint>
+        </mat-form-field>
+      </div>
+
+    
+
+  <div class="form-row">
+    <mat-form-field appearance="outline">
+        <mat-label>Moyenne 2eme</mat-label>
+        <input type="number" formControlName="moy2eme" min="0" max="20" matInput placeholder="1ere Licence">
+        <mat-hint>sur 20</mat-hint>
+      </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Rang 2eme</mat-label>
+      <input type="number" formControlName="rang2eme" min="1" max="20" matInput placeholder="rang 2eme Licence">
+      <mat-hint>sur promotion</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Effectif promotion</mat-label>
+      <input type="number" formControlName="eff2eme" min="1" max="999" matInput placeholder="Effectif 2eme">
+      <mat-hint>nombre d'élèves</mat-hint>
+    </mat-form-field>
+  </div>
+
+<div class="form-row">
+<mat-form-field appearance="outline">
+    <mat-label>Moyenne 3eme</mat-label>
+    <input type="number" formControlName="moy3eme" min="0" max="20" matInput placeholder="3eme Licence">
+    <mat-hint>sur 20</mat-hint>
+  </mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Rang 3eme</mat-label>
+  <input type="number" formControlName="rang3eme" min="1" max="20" matInput placeholder="rang 3eme Licence">
+  <mat-hint>sur promotion</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Effectif promotion</mat-label>
+  <input type="number" formControlName="eff3eme" min="1" max="999" matInput placeholder="Effectif 3eme">
+  <mat-hint>nombre d'élèves</mat-hint>
+</mat-form-field>
+</div>
+
+    
+
+      <div class="form-row">
+        <button id="btnreset" type="button" (click)="resetthings()" mat-raised-button color="basic">Réinitialiser</button>
+        <button id="btncalcul" mat-raised-button color="accent">Calculer</button>
+      </div>
+    </form>
+  </div>
+
+ 
+</div>

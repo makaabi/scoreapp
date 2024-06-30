@@ -20,6 +20,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule  } from '@angular/material/radio';
 import { ToastrModule } from 'ngx-toastr';
+import { CalculinsatComponent } from './calculinsat/calculinsat.component';
 
 
 
@@ -28,7 +29,8 @@ import { ToastrModule } from 'ngx-toastr';
   declarations: [
     AppComponent,
     Calcul1Component,
-    Calcul2Component
+    Calcul2Component,
+    CalculinsatComponent
   ],
   imports: [
     BrowserModule,
